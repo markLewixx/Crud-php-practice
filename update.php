@@ -41,20 +41,20 @@ if(isset($_GET['id'])){
 <body>
     <div class="container">
         <h2>Update Form</h2>
-        <form action="" method="post">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <form action="" method="post" class="form-group">
+            <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
             <label for="firstname">First Name:</label>
-            <input type="text" name="firstname" id="firstname" value="<?php echo $firstname; ?>">
+            <input type="text" class="form-control" name="firstname" id="firstname" value="<?php echo $firstname; ?>">
             <label for="lastname">Last Name:</label>
-            <input type="text" name="lastname" id="lastname" value="<?php echo $lastname; ?>">
+            <input type="text" name="lastname" class="form-control" id="lastname" value="<?php echo $lastname; ?>">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" value="<?php echo $email; ?>">
+            <input type="email" name="email" class="form-control"  id="email" value="<?php echo $email; ?>">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="<?php echo $password; ?>">
             <label for="gender">Gender:</label>
             <input type="radio" name="gender" id="gender" value="male" <?php echo $gender == 'male' ? 'checked' : ''; ?>> Male
             <input type="radio" name="gender" id="gender" value="female" <?php echo $gender == 'female' ? 'checked' : ''; ?>> Female
-            <input type="submit" name="update" value="Update">
+            <input type="submit" name="update" value="Update" class="btn btn-primary">
     </div>
     </body>
     </html>

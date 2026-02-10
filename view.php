@@ -13,9 +13,9 @@ $conn->close();
     <title>View Page</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
  </head>
- <body>
+ <body style="background-color: #f0f0f0; margin:28px;">
     <div class="container">
-        <h2>user</h2>
+        <h2>USER</h2>
         <table class="table">
             <thread>
                 <tr>
