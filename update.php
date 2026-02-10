@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-if(isset($_POST['id'])){
+if(isset($_POST['update'])){
     $id = $_POST['id'];
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
@@ -27,7 +27,7 @@ if(isset($_GET['id'])){
     $password = $row['password'];
     $gender = $row['gender'];
     $id = $row['id'];
-   }
+   
 }
 ?>
 <!DOCTYPE html>
@@ -51,6 +51,15 @@ if(isset($_GET['id'])){
             <input type="email" name="email" id="email" value="<?php echo $email; ?>">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="<?php echo $password; ?>">
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender" value="male" <?php echo $gender == 'male' ? 'checked' : ''; ?>> Male
+            <input type="radio" name="gender" id="gender" value="female" <?php echo $gender == 'female' ? 'checked' : ''; ?>> Female
+            <input type="submit" name="update" value="Update">
     </div>
     </body>
     </html>
+    <?php
+  }else{   
+    header("Location: view.php");
+  }
+    ?>
