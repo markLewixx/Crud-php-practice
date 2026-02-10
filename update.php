@@ -53,3 +53,4 @@ if(isset($_GET['id'])){
             <input type="password" name="password" id="password" value="<?php echo $password; ?>">
     </div>
     </body>
+    </html>

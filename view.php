@@ -28,7 +28,7 @@ $conn->close();
                 </tr>
             </thread>
             <tbody>
-                <?php
+                <?php   
                 while($row = $result->fetch_assoc()){
                     ?>
                     <tr>
