@@ -1,21 +1,21 @@
 <?php
 include 'config.php';
 if(isset($_POST['submit'])){
-    $name = $_POST['firstname'];
-    $email = $_POST['lastname'];
-    $password = $_POST['email'];
-    $confirm_password = $_POST['password'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
     $gender = $_POST['gender'];
+    $password = $_POST['password'];
 
    //save record to database
-   $sql = "INSERT INTO users (firstname, lastname, email, password, gender) VALUES ('$name', '$email', '$password',  '$gender')";
+   $sql = "INSERT INTO users (firstname, lastname, email, password, gender) VALUES ('$firstname', '$lastname', '$email', '$password',  '$gender')";
    $result = $conn->query($sql);
    if($result === TRUE){
     echo "New record created successfully";
    }else{
     echo "Error: ". $sql . "<br>" . $conn->error;
    }
-   conn->close();
+   $conn->close();
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
         <label for="email">Email:</label>
         <input type="email" name="email" id="email"> <br>
         <label for="password">Password:</label>
-        <input type="password" name="confirm_password" id="confirm_password"> <br>
+        <input type="password" name="password" id="password"> <br>
         <label for="gender">Gender:</label>
         <input type="radio" name="gender" id="gender" value="male"> Male
         <input type="radio" name="gender" id="gender" value="female"> Female <br>
