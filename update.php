@@ -42,7 +42,7 @@ if(isset($_GET['id'])){
     <div class="container">
         <h2>Update Form</h2>
         <form action="" method="post" class="form-group">
-            <input type="hidden" class="form-control" name="id" value="<?php echo $id; ?>">
+            <input type="hidden"  name="id" value="<?php echo $id; ?>">
             <label for="firstname">First Name:</label>
             <input type="text" class="form-control" name="firstname" id="firstname" value="<?php echo $firstname; ?>">
             <label for="lastname">Last Name:</label>
